@@ -11,37 +11,40 @@
 // ****************************************************************************
 // Machine scheme
 //
-// PIC32MX110F016B
-// PIC32MX120F032B
-// PIC32MX130F064B
-// PIC32MX130F256B
-// PIC32MX150F128B
-// PIC32MX170F256B
-//
+// PIC32MX210F016B
+// PIC32MX220F032B
+// PIC32MX230F064B
+// PIC32MX230F256B
+// PIC32MX250F128B
+// PIC32MX270F256B
+
 //                                    _______
 //    ~MCLR---  ----  ----  ----  01-|.      |-28  ----  ----  ----  --- AVDD
 //    --------  AN00  PWM0  DA00  02-|       |-27  ----  ----  ----  --- AVSS
 //    --------  AN01  PWM1  DA01  03-|   O   |-26  DB15  ----  AN09  SPI2_SCK
 //    PGED1---  AN02  ----  DB00  04-|       |-25  DB14  ----  AN10  --------
-//    PGEC1---  AN03  ----  DB01  05-|   P   |-24  DB13  ----  AN11  SPI2_SDI
-//    I2C2_SDA  AN04  ----  DB02  06-|   I   |-23  DB12  ----  AN12  --------
-//    I2C2_SCL  AN05  ----  DB03  07-|   C   |-22  DB11  ----  ----  SPI2_SDO
-//    VSS ----  ----  ----  ----  08-|       |-21  DB10  ----  EI01  --------
+//    PGEC1---  AN03  ----  DB01  05-|   P   |-24  PB13  ----  AN11  SPI2_SDI
+//    I2C2_SDA  AN04  ----  DB02  06-|   I   |-23  ----  ----  ----  V USB3V3
+//    I2C2_SCL  AN05  ----  DB03  07-|   C   |-22  DB11  ----  ----  --USB_Dm
+//    VSS ----  ----  ----  ----  08-|       |-21  DB10  ----  EI01  --USB_DM
 //    UART1_RX  ----  PWM2  DA02  09-|   3   |-20  ----  ----  ----  --- VCAP
 //    --------  ----  PWM3  DA03  10-|   2   |-19  ----  ----  ----  ---- VSS
 //    --------  EI04  ----  DB04  11-|       |-18  DB09  ----  ----  UART2_TX
-//    --------  ----  PWM4  DA04  12-|   O   |-17  DB08  ----  ----  UART2_RX
+//    SPI2_SDO  ----  PWM4  DA04  12-|   O   |-17  DB08  ----  ----  UART2_RX
 //    VDD ----  ----  ----  ----  13-|       |-16  DB07  ----  ----  UART1_TX
-//    --------  EI03  ----  DB05  14-|_______|-15  DB06  ----  EI02  --------
+//    USBID --  EI03  ----  DB05  14-|_______|-15  ----  ----  ----  -- V BUS
 //
-// Pann  Dgital (a may be A, B o c)
-// ANnn  Analóg
-// PWMn  Pwm
+// Dann  Digital (donde a puede ser A, B)
+// ANn   Analógico
+// PWMn  Pulse Width Modulation
 // EInn  EI (external interrupt)
 //
 // I2Cn  I2C
 // SPIn  SPI
 // UARTn Serial
+//
+// Numeración de pines para los encapsulados SOIC, SPDIP, SSOP.
+// Para otros encapsulados deberá hacerse una corrección de numeración de pines
 
 
 // ****************************************************************************
@@ -169,13 +172,13 @@
 #define PORTB03 PORTB,ANSELB,TRISB,  3
 #define PORTB04 PORTB,ANSELB,TRISB,  4
 #define PORTB05 PORTB,ANSELB,TRISB,  5
-#define PORTB06 PORTB,ANSELB,TRISB,  6
+
 #define PORTB07 PORTB,ANSELB,TRISB,  7
 #define PORTB08 PORTB,ANSELB,TRISB,  8
 #define PORTB09 PORTB,ANSELB,TRISB,  9
 #define PORTB10 PORTB,ANSELB,TRISB, 10
 #define PORTB11 PORTB,ANSELB,TRISB, 11
-#define PORTB12 PORTB,ANSELB,TRISB, 12
+
 #define PORTB13 PORTB,ANSELB,TRISB, 13
 #define PORTB14 PORTB,ANSELB,TRISB, 14
 #define PORTB15 PORTB,ANSELB,TRISB, 15
@@ -217,13 +220,11 @@
 #define DB03 PORTB03,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB04 PORTB04,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB05 PORTB05,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
-#define DB06 PORTB06,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB07 PORTB07,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB08 PORTB08,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB09 PORTB09,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB10 PORTB10,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB11 PORTB11,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
-#define DB12 PORTB12,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB13 PORTB13,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB14 PORTB14,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
 #define DB15 PORTB15,ODCB,CNPUB,CNPDB,CNCONB,CNENB,CNSTATB,0x8000,IRQ34
@@ -253,19 +254,9 @@
 #define AN03  PORTB01,  3
 #define AN04  PORTB02,  4
 #define AN05  PORTB03,  5
-
 #define AN09  PORTB15,  9
 #define AN10  PORTB14, 10
 #define AN11  PORTB13, 11
-#define AN12  PORTB12, 12
-
-
-
-
-
-
-
-z
 
 // Mascara de parametres
 #define ANALIST PORTLIST,_UI
@@ -347,7 +338,6 @@ z
 //         1       2     3      4    5    6     7
 //      ---- ------- -----  ----- ---- ---- -----
 #define EI01 PORTB10,INTCON,INT1R,0x02,0x03,IRQ07
-#define EI02 PORTB06,INTCON,INT2R,0x04,0x01,IRQ11
 #define EI03 PORTB05,INTCON,INT3R,0x08,0x01,IRQ15
 #define EI04 PORTB04,INTCON,INT4R,0x10,0x02,IRQ19
 
@@ -491,9 +481,9 @@ z
 // 6.Register SPIxBRG
 // 7.Register SPIxBUFF
 //
-//          R      1     2       3        4        5       6       7
-//      ----- ------ ----- ------- -------- -------- ------- -------
-#define rSPI2 RPB11R,SDI2R,SPI2CON,SPI2CON2,SPI2STAT,SPI2BRG,SPI2BUF
+//          R     1     2       3        4        5       6       7
+//      ----- ----- ----- ------- -------- -------- ------- -------
+#define rSPI2 RPA4R,SDI2R,SPI2CON,SPI2CON2,SPI2STAT,SPI2BRG,SPI2BUF
 
 // C.Name  cSPIx (control bits)
 // 1.Value RPaxR: Seleccio port SDO
@@ -527,7 +517,7 @@ z
 //
 //         1       2       3       4     5     6     7
 //      ---- ------- ------- ------- ----- ----- -----
-#define SPI2 PORTB11,PORTB13,PORTB15,rSPI2,cSPI2,sSPI2
+#define SPI2 PORTA04,PORTB13,PORTB15,rSPI2,cSPI2,sSPI2
 
 // Mascara de parametres
 #define rSPILIST _VUI,_VUI,_VUI,_VUI,_VUI,_VUI,_VUI

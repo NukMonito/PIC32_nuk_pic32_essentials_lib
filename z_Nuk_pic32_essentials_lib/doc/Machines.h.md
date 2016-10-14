@@ -130,14 +130,14 @@ Las secciones en cada fichero son:
 //    PGED1---  AN02  ----  DB00  04-|       |-25  DB14  ----  AN10  --------
 //    PGEC1---  AN03  ----  DB01  05-|   P   |-24  PB13  ----  AN11  SPI2_SDI
 //    I2C2_SDA  AN04  ----  DB02  06-|   I   |-23  ----  ----  ----  V USB3V3
-//    I2C2_SCL  AN05  ----  DB03  07-|   C   |-22  DB11  ----  ----  SPI2_SDO
-//    VSS ----  ----  ----  ----  08-|       |-21  DB10  ----  EI01  --------
+//    I2C2_SCL  AN05  ----  DB03  07-|   C   |-22  DB11  ----  ----  - USB_DM
+//    VSS ----  ----  ----  ----  08-|       |-21  DB10  ----  EI01  - USB_DP
 //    UART1_RX  ----  PWM2  DA02  09-|   3   |-20  ----  ----  ----  --- VCAP
 //    --------  ----  PWM3  DA03  10-|   2   |-19  ----  ----  ----  ---- VSS
 //    --------  EI04  ----  DB04  11-|       |-18  DB09  ----  ----  UART2_TX
-//    --------  ----  PWM4  DA04  12-|   O   |-17  DB08  ----  ----  UART2_RX
+//    SPI2_SDO  ----  PWM4  DA04  12-|   O   |-17  DB08  ----  ----  UART2_RX
 //    VDD ----  ----  ----  ----  13-|       |-16  DB07  ----  ----  UART1_TX
-//    --------  EI03  ----  DB05  14-|_______|-15  ----  ----  ----  -- V BUS
+//    USBID --  EI03  ----  DB05  14-|_______|-15  ----  ----  ----  -- V BUS
 //
 // Dann  Digital (donde a puede ser A, B)
 // ANn   Analógico
@@ -150,6 +150,7 @@ Las secciones en cada fichero son:
 //
 // Numeración de pines para los encapsulados SOIC, SPDIP, SSOP.
 // Para otros encapsulados deberá hacerse una corrección de numeración de pines
+
 ```
 
 
