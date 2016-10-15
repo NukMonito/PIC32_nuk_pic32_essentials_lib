@@ -67,7 +67,7 @@ Analog(ANxx)
 **Parámetros**
 >AN*xx*.
 >>Donde *xx* es el número de puerto analógico a gestionar. 
-Para saber qué puertos están disponible en cada MCU, véase 
+Para saber qué puertos están disponibles en cada MCU, véase 
 [Machines](Machines.h.md#Machines)
 
 **Retorno**
