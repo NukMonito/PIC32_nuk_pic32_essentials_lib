@@ -66,7 +66,7 @@ Analog(ANxx)
 
 **Parámetros**
 >AN*xx*.
->>Donde *xx* es el número de puerto analogico a gestionar. 
+>>Donde *xx* es el número de puerto analógico a gestionar. 
 Para saber qué puertos están disponible en cada MCU, véase 
 [Machines](Machines.h.md#Machines)
 
@@ -109,12 +109,12 @@ unsigned int get(void)
 
 **Retorno**
 >unsigned int
->> Valor en el rango (0..1023) capturado del puerto en el instante de la
+>>Valor en el rango (0..1023) capturado del puerto en el instante de la
 llamada al método. Este valor es proporcional al rango de voltaje (0..Vdd),
 donde Vdd es la tensión que alimenta al MCU (típicamente 3,3V).
 
 **Ejemplo**
-> El siguiente código declara dos objetos asociados a los puertos analógios
+>El siguiente código declara dos objetos asociados a los puertos analógicos
 'AN00' y 'AN01'. En cada iteración de *loop()* leemos los valores de cada uno.
 
 ```C

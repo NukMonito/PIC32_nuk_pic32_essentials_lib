@@ -331,7 +331,7 @@ de ese valor,*led_1*, *led_2* y *led_3* se encenderán y apagaran secuencialment
 
 **Nota**
 >El código está escrito para que los leds funcionen con una configuración 
-física en pull up. Podemos reescribirlo para una configuracion en 
+física en pull up. Podemos reescribirlo para una configuración en 
 open drain. Obsérvese que en *main()* se ha inluído la sentencia ` led1.open()`;
 de no hacerlo, el puerto quedaría configurado en modo pull up.
 

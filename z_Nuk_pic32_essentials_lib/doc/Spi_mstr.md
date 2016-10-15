@@ -143,7 +143,7 @@ en la misma cantidad que los transmitidos.
 >>bytes a transmitir.
 > 
 >int *size*
->>Cantidad de caractreres que serán transmitidos y recibidos.
+>>Cantidad de caracteres que serán transmitidos y recibidos.
 > 
 >unsigned int *freq*
 >>Opcional. Frecuencia del bus. Por omisión == la dada en el constructor.

@@ -186,7 +186,7 @@ void on(void)
 >void
  
 **Ejemplo**
-> El siguiente código declara un  objeto asociado al puerto digital 'DA00'.
+>El siguiente código declara un  objeto asociado al puerto digital 'DA00'.
 En *loop*() encendemos el puerto.
  
 ```C
@@ -306,7 +306,7 @@ void off(void)
 >void
  
 **Ejemplo**
-> El siguiente código declara un objeto asociado al puerto digital 'DA00'.
+>El siguiente código declara un objeto asociado al puerto digital 'DA00'.
 En *loop*() apagamos el puerto.
  
 ```C
@@ -425,8 +425,8 @@ digital en modo salida pull up y lo pone a on.
 >void
  
 **Ejemplo**
-> El siguiente código declara un objeto asociado al puerto digital 'DA00'.
-En cada iteración de *loop*() el puerto cambará de polaridad.
+>El siguiente código declara un objeto asociado al puerto digital 'DA00'.
+En cada iteración de *loop*() el puerto cambiará de polaridad.
  
 ```C
 //----------------------------------------------
@@ -482,7 +482,7 @@ bool ison(void)
 >**false** si el pin está en off
  
 **Ejemplo**
-> El siguiente código declara un objeto asociado al puerto digital 'DA00'.
+>El siguiente código declara un objeto asociado al puerto digital 'DA00'.
 En cada iteración de *loop*() se comprueba su estado.
  
 ```C
@@ -563,13 +563,13 @@ void onchange(void (*callback)(Digital* object))
 ```
 
 **Descripción**
->Define una funcion de usuario que será llamada cuando el puerto cambie
+>Define una función de usuario que será llamada cuando el puerto cambie
 de estado.
  
 **Parámetros**
 >void (\**callback*)(Digital\* *object*))
 >> Función a llamar cuando el puerto cambie de estado. Tiene la forma 
-void *funcion_de_callback*(Digital\* *object*).
+void *función_de_callback*(Digital\* *object*).
  
 **Retorno**
 >void

@@ -29,10 +29,10 @@ Los objetos de la clase **Fifo**, gestionan colas de bytes. Pueden
 utilizarse como colas de mensajes entre diferentes partes de un proyecto, 
 que fluyen de forma que el primero que entra es el primero que sale.
 
-La clase Fifo puede manejarse, también, derivando nuevas clases. Por ejempo: 
+La clase Fifo puede manejarse, también, derivando nuevas clases. Por ejemplo: 
 algunas de las interfaces de comunicaciones como la clase 
 [Serial_Rx](Serial.md) se gestionan mediante estas colas.
- 
+
 
 
 El tamaño de las colas **Fifo** viene dado por la constante *BUFF_SIZE* 
@@ -240,7 +240,7 @@ int get(const char* cadena)
 
 **Parámetros**
 >const char* *cadena*
->> *Cadena* donde se depositarán los bytes extraidos, más un byte *NULL*.
+>> *Cadena* donde se depositarán los bytes extraídos, más un byte *NULL*.
 
 **Retorno**
 >int size
@@ -286,7 +286,7 @@ completada.
 cadena es invalido.
 
 **Nota**
->Obsérvese que la extacción de bytes se hace en crudo.
+>Obsérvese que la extracción de bytes se hace en crudo.
 
 
 
@@ -312,7 +312,7 @@ char get_char()
 
 **Retorno**
 >char
->> Si lo hay, el byte leido.
+>> Si lo hay, el byte leído.
 >> Si no lo hay 0 (cero).
 
 
@@ -333,7 +333,7 @@ bool get_line(char* cadena)
 
 **Descripción**
 >Extrae de la **Fifo** los bytes pendientes hasta encontrar un final 
-de linea (*EOL*). Si en la **Fifo** no aparace *EOL*, la función devuelve
+de linea (*EOL*). Si en la **Fifo** no aparece *EOL*, la función devuelve
 **false** y el contenido de la *cadena* será invalido.
 
 **Parámetros**

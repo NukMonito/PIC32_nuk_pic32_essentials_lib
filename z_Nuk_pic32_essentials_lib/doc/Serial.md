@@ -107,8 +107,8 @@ La función deberá tener la forma **void *mi_funcion* (Serial_Rx\*)**.
  
 **Notas**
 > Objsérvese que no es posible configurar los parámetros de paridad, bits 
-de parada y tramaño del byte, que son, por omisión 1/par/8 respectivamente; 
-valores estandar de facto. No obstante, es posible cambiar esta configuración 
+de parada y tamaño del byte, que son, por omisión 1/par/8 respectivamente; 
+valores estándar de facto. No obstante, es posible cambiar esta configuración 
 a bajo nivel modificando los archivos de la capeta [Machines](Machines.md)
  
 **Ejemplo**
@@ -341,7 +341,7 @@ main(int argc, char** argv) {
 ```
 
 **Ejemplo 3**
-> Lo mismo que en los ejemplos anteriores; pero utilizando los puertos Rx y Tx 
+>Lo mismo que en los ejemplos anteriores; pero utilizando los puertos Rx y Tx 
 de UART1_RX y UART2_TX respectivamente
  
 ```C
@@ -406,7 +406,7 @@ void put(char* cadena,unsigned int size)
 
 **Ejemplo 1**
 > El siguiente código declara un objeto asociado al puerto UART2_TX. 
-En cada iteración de *loop()* transmite el mesaje *¡¡¡ Hola !!!*
+En cada iteración de *loop()* transmite el mensaje *¡¡¡ Hola !!!*
 
 ```C
 //----------------------------------------------
@@ -464,7 +464,7 @@ void put_char(char byte)
 
 **Parámetros**
 >const char *byte*
->> *byte* a trnasmitir.
+>> *byte* a transmitir.
 
 **Retorno**
 >void
@@ -576,7 +576,7 @@ int get(const char* cadena)
 >> Cantidad de bytes leídos de la **Fifo**.
 
 **Nota**
->Es resposabilidad del programador que la *cadena* disponga del tamaño 
+>Es responsabilidad del programador que la *cadena* disponga del tamaño 
 suficiente para albergar los bytes recibidos. 
 
 **Ejemplo**
@@ -649,7 +649,7 @@ bool get(const char* cadena, int size)
 
 **Retorno**
 >bool
->> **true** Habian suficientes bytes. La cadena ha sido completada.
+>> **true** Habían suficientes bytes. La cadena ha sido completada.
 >>
 >> **false** No hay suficientes bytes. El contenido de la cadena es invalido.
 

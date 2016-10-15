@@ -25,7 +25,7 @@
 ![metode](img/Nuk-metode.jpg)
 [Top](#TOP) | [Index](Index.md)
 
-**IrqObject** Es una clase deribable no instanciable, ya que tiene el método 
+**IrqObject** Es una clase derivable no instanciable, ya que tiene el método 
 virtual puro *Irq()*.
 
 Esta clase gestiona los mecanismos de interrupción de forma tal que varios 
@@ -75,7 +75,7 @@ Analog(ANxx)
 ```
 ------------------------------------------------------------------------------
 **Descripción**
-> Asocia el objecto a una iterrupción del MCU. El constructor de la clase
+> Asocia el objecto a una interrupción del MCU. El constructor de la clase
 derivada deberá invocar al constructor de la clase IrqObject con los parámetros 
 apropiados.
 

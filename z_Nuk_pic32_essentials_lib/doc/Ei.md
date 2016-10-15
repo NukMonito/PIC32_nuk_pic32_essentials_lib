@@ -175,7 +175,7 @@ void onchange(void(*callback)(Ei*))
 
 **Descripción**
 >Define una funcion de usuario que será llamada cuando el puerto cambie
-de estado. Debe tener el formato **void *mi_funcion*(Ei\*)**
+de estado. Debe tener el formato **void *mi_función*(Ei\*)**
 
 **Parámetros**
 >void (\***callback**)(Ei\*))

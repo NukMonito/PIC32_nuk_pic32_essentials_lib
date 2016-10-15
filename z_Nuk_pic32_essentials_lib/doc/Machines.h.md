@@ -21,7 +21,7 @@
 ![metode](img/Nuk-metode.jpg)
 </A><A href="#TOP">Top</A> | [Index](Index.md)
 
-Este fichecho y los **Machine_32MXxxxFxxx.h**, en la carpeta *includes/Machines/*, 
+Este fichero y los **Machine_32MXxxxFxxx.h**, en la carpeta *includes/Machines/*, 
 describen mediante macros la configuración física de los posibles MCUs 
 que se pueden manejar con esta librería.
 
@@ -29,9 +29,9 @@ El primero (**Machines.h**) determina qué fichero de los segundos
 (**Machine_32MXnFx.h**) se debe incluir en función de la directiva *-mprocessor* 
 en el momento de la compilación del proyecto.
 
-Los segundos continen varias secciones; una por cada tipo de periférco a 
+Los segundos contienen varias secciones; una por cada tipo de periférco a 
 manejar y, en ellas, la declaración de macros que los describen. Estas 
-macros pueden modificarse, eleminarse o añadirse con el fin de cambiar algunos 
+macros pueden modificarse, eliminarse o añadirse con el fin de cambiar algunos 
 aspectos del comportamiento de los MCUs.
 
 <A name="Machines"></A>
@@ -239,7 +239,7 @@ Timer section
 >>Donde *x* es el número de timer. Registro de control del timer.
 > 
 >3 Register TMRx
->>Donde *x* es el número de timer. Registro configuracion de tics del periodo en 
+>>Donde *x* es el número de timer. Registro configuración de tics del periodo en 
 >>tics de reloj / divisor.
 > 
 >4 Register PRx
@@ -260,7 +260,7 @@ Timer section
 > 
 >15 Macro    IRQn
 >>Donde *n* es el número de interrupción. Alguna de las macros enumeradas en 
-[Intrrupt secction](S01)
+[Interrupt section](S01)
 
 **Nota**
 >En principio, no debe modificarse nada en esta sección.
@@ -291,13 +291,13 @@ Port section
 >>Nombre de la macro con el que otras podrán hacer referencia a ella.
 > 
 >2 Register PORTa
->>Donde *a* complea el nombre del registro. Pude ser A, B o C
+>>Donde *a* completa el nombre del registro. Pude ser A, B o C
 > 
 >3 Register ANSELa
->>Donde *a* complea el nombre del registro. Pude ser A, B o C 
+>>Donde *a* completa el nombre del registro. Pude ser A, B o C 
 > 
 >4 Register TRISa
->>Donde *a* complea el nombre del registro. Pude ser A, B o C 
+>>Donde *a* completa el nombre del registro. Pude ser A, B o C 
 > 
 >5 Value    Bit number
 >>Número de bit en el registro que lo gestiona.
@@ -343,7 +343,7 @@ Digital section
 > 
 >8 Register CNSTATa 
 >>Donde *a* completa el nombre del registro. 
->>RegistroS de gestión que rigen el comportamiento del puerto. 
+>>Registros de gestión que rigen el comportamiento del puerto. 
 > 
 >9 Bit      CNCONa.ON:
 >>Change Notice (CN) Control ON. 
@@ -385,7 +385,7 @@ Analog section
 >>Debe ser una de las macros relacionadas en [Port seccion](#S03). 
 > 
 >3 Value    Analogic port number
->>Número del pin anlógico.
+>>Número del pin analógico.
 
 **Nota**
 >En principio, no debe modificarse nada en esta sección.
@@ -444,7 +444,7 @@ Pwm section (Output compare)
 >>>Alguna de las macros enumeradas en [Port secction](S03)
 >> 
 >>3 Register RPaxxR 
->>>Registro RPaxxR. Donde a y xx deben conincidir con las de la macro PORTaxx. 
+>>>Registro RPaxxR. Donde a y xx deben coincidir con las de la macro PORTaxx. 
 >>
 >>4 Register OCxCON 
 >> 
@@ -456,7 +456,7 @@ Pwm section (Output compare)
 >>>Registros de gestión que rigen el comportamiento de los puertos PWM. 
 >> 
 >>7 Value    RPaxxR 
->>>Valor que debe tormar el registro RPaxxR para hacer que este sea, 
+>>>Valor que debe tomar el registro RPaxxR para hacer que este sea, 
 >>>efectivamente, un puerto gestionado por el módulo output compare del MCU. 
 >>>Véase la documentación del fabricante. 
 >> 
@@ -472,7 +472,7 @@ Pwm section (Output compare)
 >>>Una de las macros del apartado **Timers posibles** de esta misma sección. 
 
 **Nota**
-> Potencialmente, los items que se pueden cambiar en esta sección son:
+> Potencialmente, los ítems que se pueden cambiar en esta sección son:
 >> **3 Register RPaxxR y 7 Value RPaxxR** en consonancia con  **1 Macro PORTaxx**
 >>
 >> **10 Macro tPWMTRMx**
@@ -592,7 +592,7 @@ disponibilidad de un byte de entrada (Receive Buffer Data Available).
 >>>o el código podrán hacer referencia a ella. 
 >> 
 >>2 Macro     PORTaxx 
->>>Una de las macros de [Port secction](#S03) 
+>>>Una de las macros de [Port section](#S03) 
 >> 
 >>3 Macro     rUARTx_RX 
 >>>Una de las macros del apartado *Registros* de esta sección. 
@@ -680,7 +680,7 @@ estado del buffer de salida (Transmit Buffer Full Status).
 >>>o el código podrán hacer referencia a ella. 
 >> 
 >>2 Macro     PORTaxx 
->>>Una de las macros de [Port secction](#S03) 
+>>>Una de las macros de [Port section](#S03) 
 >> 
 >>3 Macro     rUARTx_RX 
 >>>Una de las macros del apartado *Registros* de esta sección. 
@@ -826,19 +826,19 @@ Spi section
 >>>Debe ser coherente con el puerto SPI elegido. 
 >>
 >>5 Macro rSPIx
->>>Alguna de las macros defininas en el apartado *Registros* de esta sección. 
+>>>Alguna de las macros definidas en el apartado *Registros* de esta sección. 
 >>
 >>6 Macro cSPIx
->>>Alguna de las macros defininas en el apartado *Bits de control* de esta 
+>>>Alguna de las macros definidas en el apartado *Bits de control* de esta 
 >>>sección. 
 >>
 >>7 Macro sSPIx
->>>Alguna de las macros defininas en el apartado *Bits de status* de esta 
+>>>Alguna de las macros definidas en el apartado *Bits de status* de esta 
 >>>sección. 
 
 
 **Notas**
-> Potencialmente, los items que se pueden cambiar en esta sección son:
+> Potencialmente, los ítems que se pueden cambiar en esta sección son:
 >>**1 Value RPaxR** en consonancia con **4 Macro PORTaxx** para puerto para SDO
 >>
 >>**2 Value SDIxR** en consonancia con **4 Macro PORTaxx** para puerto para SDI

@@ -42,7 +42,7 @@ de la frecuencia a la que funcionará el MCU.
 comportamiento impredecible de los objetos de la librería.
 > 
 >Para saber más acerca de qué valores pueden tomar las directivas consúltense 
-los manuales del fabricande del MCU.
+los manuales del fabricante del MCU.
 
 **Ejemplo**
 

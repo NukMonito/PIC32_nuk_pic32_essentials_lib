@@ -4,8 +4,8 @@
 # Descripción
 
 
-**Nuk pic32 essentials lib** es una libreria de objetos escrita en C++ que 
-facilita enórmemente las tareas de desarrollo de proyectos para la gama de 
+**Nuk pic32 essentials lib** es una librería de objetos escrita en C++ que 
+facilita enormemente las tareas de desarrollo de proyectos para la gama de 
 microcontroladores PIC de 32 bits, ya que enmascara (pero no impide) las 
 configuraciones y operaciones mediante registros.
 
@@ -40,7 +40,7 @@ configurada para operar con las disposiciones de los MCU 32MX relacionadas más
 abajo. Corresponden a los que son accesibles al público en general por su 
 construcción física y sirven de base y ejemplo para editar la de todos los 
 demás. Estas disposiciones se pueden cambiar (dentro de las limitaciones que 
-impone el diseño físico de los microcontroladores) modifiando las constantes 
+impone el diseño físico de los microcontroladores) modificando las constantes 
 que contienen los archivos de configuración:
 
 * Machines

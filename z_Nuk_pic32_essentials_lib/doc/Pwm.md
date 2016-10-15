@@ -68,7 +68,7 @@ Pwm(PWMx)
 **Descripción**
 > Asocia el objecto a un puerto PWM del MCU
  
-**Parametros**
+**Parámetros**
 >PWM*x*.
 >>Donde *x* es el número de puerto PWM a gestionar. 
 Para saber qué puertos están disponible en cada MCU, véase 
@@ -133,20 +133,20 @@ void *mi_funcion*(Pwm\* objeto).
 puede utilizar los timers **2** y **3**. Esto implica que, dados dos puertos 
 **PWM** que utilizan el mismo timer, el cambio de *periodo* en uno de ellos 
 supone el cambio de *periodo* en el otro.
-Por omisión, la libreria asigna el timer 2 de 16 bits a los puertos pares, el 
-timer 3 de 16 bits a los impares no divisbles por tres, y el timer 23 de 32 
+Por omisión, la librería asigna el timer 2 de 16 bits a los puertos pares, el 
+timer 3 de 16 bits a los impares no divisibles por tres, y el timer 23 de 32 
 bits a los puertos cuyo número es divisible por 3. 
 El uso de los puertos con timer de 32 bits es incompatible con el uso de los 
 demás. 
 > 
-> También debe ternerse en cuenta que el *periodo* máximo programable es: 
+>También debe ternerse en cuenta que el *periodo* máximo programable es: 
 >	* *microsegundos* = **2** ^ *bits_del_timer* \* **256** \/ *velocidad_del_procesador_en_MHz*
 > 
 >Para saber más véase [Timer](Timer.md), [Config_xx.h](Config_xx.md) y 
 [Machines.h](Machines.md).
 
 **Ejemplo 1**
-> El siguiente código declara un objeto asociado al puerto PWM0. Inicalmente,
+>El siguiente código declara un objeto asociado al puerto PWM0. Inicalmente,
 se establece un periodo de 40 milisegundos y un pulso de 1 milisegundo. 
 En cada llamada a la funcion de <A href="#F01">callback</A> *on_pwm*, el 
 valor del pulso varia hasta llegar a 40 milisegundos; después disminuye hasta 
@@ -290,8 +290,8 @@ se invoque al expirar el *periodo*
 puede utilizar los timers **2** y **3**. Esto implica que, dados dos puertos 
 **PWM** que utilizan el mismo timer, el cambio de *periodo* en uno de ellos 
 supone el cambio de *periodo* en el otro.
-Por omisión, la libreria asigna el timer 2 de 16 bits a los puertos pares, el 
-timer 3 de 16 bits a los impares no divisbles por tres, y el timer 23 de 32 
+Por omisión, la librería asigna el timer 2 de 16 bits a los puertos pares, el 
+timer 3 de 16 bits a los impares no divisibles por tres, y el timer 23 de 32 
 bits a los puertos cuyo número es divisible por 3. 
 El uso de los puertos con timer de 32 bits es incompatible con el uso de los 
 demás. 
@@ -369,7 +369,7 @@ establecido con el método <A href="#M01">*set()*</A>.
 > El siguiente código declara un objeto asociado al puerto PWM0. Inicalmente,
 se establece un periodo de 40 milisegundos y un pulso de 1 milisegundo. La 
 funcion de *callback* alterna la salida a on y off, por lo que el pulso 
-aparecerá cada 80 miliseguntos.
+aparecerá cada 80 milisegundos.
  
 ```C
 //----------------------------------------------
@@ -465,7 +465,7 @@ void funcion_de_callback(Pwm* objeto)
 **Descripción**
 >Si se define en el método <A href="#M01">set()</A>, esta función, que puede 
 tomar el nombre que el desarrollador prefiera, será invocada por el objeto 
-**Pwm** cada vez que el *perido* expire.
+**Pwm** cada vez que el *periodo* expire.
 >Por lo general, Las taréas de la función son:
 >* Cambiar el régimen del periodo con <A href="#M01">set()</A>
 >* Cambiar el régimen del pulso con <A href="#M02">on()</A> y <A href="#M03">off()</A>

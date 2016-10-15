@@ -151,9 +151,9 @@ implementar de nuevo la variable:
  
 **Notas**
 >Si el dispositivo **master** periférico deselecciona el puerto **SPI**, el 
-proceso se interrumpeirá.
+proceso se interrumpirá.
 >
->Conocer cuántos bytes se requerieren en cada transmisión forma parte del 
+>Conocer cuántos bytes se requierieren en cada transmisión forma parte del 
 diseño correcto de los protocolos o de la correcta interpretación de los 
 diseñados por los fabricantes de dispositivos con interfaz **SPI**.
 > 

@@ -28,7 +28,7 @@ En el fichero *Defininions.h* se definen las constantes globales:
 > Toma el valor por omisión 0x0A (end of line)
 
 **BUFF_SIZE**
-> Es el tamño de los buffers de entrada de los objetos de la clase
+>Es el tamaño de los buffers de entrada de los objetos de la clase
 [Serial_Rx](Serial.md), de entrada/salida de los objetos de la clase 
 [I2c](I2c.md) y del tamaño de los 
 objetos de [Fifo](Fifo.md). Su valor por omisión es **1024**.

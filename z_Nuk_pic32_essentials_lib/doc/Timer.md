@@ -87,7 +87,7 @@ Timer(TIMERn)
 >> 
 >> El uso del TIMER23 es incompatible con el uso de TIMER2 y TIMER3
 >>
->> El uso del TIMER45 es incompativle don el uso de TIMER4 Y TIMER5
+>> El uso del TIMER45 es incompatible don el uso de TIMER4 Y TIMER5
  
 **Retorno**
 >void

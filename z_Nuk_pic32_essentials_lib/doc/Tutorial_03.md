@@ -70,7 +70,7 @@ Para este proyecto es necesario:
 	* Un servo
 
 
-Aprenderemos el manejo básio de los puertos de salida [Pwm](Pwm.md) utilizando 
+Aprenderemos el manejo básico de los puertos de salida [Pwm](Pwm.md) utilizando 
 las clases de la librería.
 
 **Notas**
@@ -107,7 +107,7 @@ necesarias a las explicaciones para adaptarlas a cada preferencias.
 En este turorial trabajaremos con el contenido de la carpeta **Tutorial_03**. 
 Si te resulta más práctico, puedes copiarla donde prefieras.
 
-La estructura de la carpeta es la misma que la de todos los tutoriares. Véase el
+La estructura de la carpeta es la misma que la de todos los tutoriales. Véase el
 [Paso 1 del Tutorial_01](Tutorial_01.md#P01)
 
 
@@ -257,7 +257,7 @@ main(int argc, char** argv) {
 ```
 
 La sentencia `pwm.set(20000,on_servo)` establece que cada 20 milisegundos 
-se ejecutará la función *on_servo()*. Tambien es el ciclo del servo.
+se ejecutará la función *on_servo()*. También es el ciclo del servo.
 
 La sentencia `while( true ) sleep();` hará que el microcontrolador duerma y 
 espere a que el periodo de 20 milisegundos expire.

@@ -104,14 +104,14 @@ módulo podrá funcionar en modo **slave**, lo que no impide funcionar en
 modo **master**.
 > 
 >void (**callback*)(I2c\*)
->>Opconal. Sólo podrá definirse si también se define el parámetro 
+>>Opcional. Sólo podrá definirse si también se define el parámetro 
 *dirección_slave*.
 Se aconseja definirla si está prevista la transmisión de datos en modo 
 **slave**. 
 Si se define, el objeto la invocará cuando sea requerida la transmisión de 
 datos por un dispositivo **master** periférico. 
 Es decir: Si está previsto que la aplicación en modo **slave** sólo reciba 
-datos, no será necesaro definir este parámetro; ya que, en este caso, el objeto 
+datos, no será necesario definir este parámetro; ya que, en este caso, el objeto 
 nunca llegará a invocarla.
 La función deberá tener el formato: 
 <A href="#F01">void *mi_funcion_de_callback*(I2c\*)</A>..
@@ -174,7 +174,7 @@ albergarlos.
 **Ejemplo**
 >El siguiente código declara un objeto asociado al puerto I2C2 funcionando en 
 modo **master** a 400K baudios. En cada iteración de *loop*() se transmiten 
-2 bytes a un dipositivo **slave** periférico con la dirección 0x7A, y se 
+2 bytes a un dispositivo **slave** periférico con la dirección 0x7A, y se 
 reciben 6 bytes de él. Seguidamente se transmiten 4 bytes sin esperar respuesta.
 
 ```C
@@ -302,7 +302,7 @@ char get_char()
 
 >**Retorno**
 >>char
->>> Si lo hay, el byte leido.
+>>> Si lo hay, el byte leído.
 >>> Si no lo hay 0 (cero).
 
 
@@ -418,7 +418,7 @@ void put_char(char byte)
 
 **Parámetros**
 >const char *byte*
->> *byte* a trnasmitir.
+>> *byte* a transmitir.
 
 **Retorno**
 >void
@@ -523,7 +523,7 @@ void funcion_de_callback(I2c* objeto_i2c)
 tomar el nombre que el desarrollador prefiera, será invocada por el objeto 
 **I2c** funcionando en modo **slave** cuando un dispositivo periférico 
 **master** requiera la transmisión de datos.
->Por lo general, Las taréas de la función son:
+>Por lo general, Las tareas de la función son:
 >* Leer los bytes de entrada con alguno de los comandos 
 <A href="#G01">get</A>.
 >* Proporcionar los bytes necesarios de salida con alguno de los comandos 
@@ -556,10 +556,10 @@ nunca invocara a alguno de los métodos <A href="#P01">put</A>.
 > 
 >Si la función de *callback* suministra más bytes de los requeridos, el 
 objeto utilizará los sobrantes en el próximo requerimiento sin llamar a la 
-funcion de *callback*, siempre que estos sean suficientes para atenderlo.
+función de *callback*, siempre que estos sean suficientes para atenderlo.
 > 
 >De todo lo dicho se desprende que la responsabilidad de conocer cuántos 
-bytes requeriere el objeto **I2c** en cada momento forma parte del diseño 
+bytes requiere el objeto **I2c** en cada momento forma parte del diseño 
 correcto del protocolo o de la correcta interpretación de los protocolos 
 diseñados por los fabricantes de dispositivos con interfaz **I2c**.
 > 
@@ -571,7 +571,7 @@ MCU que funcionará en modo **master**. La segunda al código del MCU que
 funcionará en modo **slave**.
 > 
 >Cada código declara un objeto **I2c** asociado al puerto **I2C** de su 
-repectivo MCU (También se declaran los objetos para la gestión del puerto serie 
+respectivo MCU (También se declaran los objetos para la gestión del puerto serie 
 en cada MCU, cuya explicación está fuera del alcance de este ejemplo. 
 Véase [Clases Serial, Serial_Tx y Serial_Rx](Serial.md)).
 > 
@@ -581,7 +581,7 @@ De éstos, envía tres por el puerto **I2C** y espera la recepción de otros tre
 (Para simplificar el ejemplo, se asume que por el puerto serie se recibirán 
 siempre, como mínimo, tres bytes)
 > 
->El MCU **slave** recibe los tres bytes envíados por el **master**, y después 
+>El MCU **slave** recibe los tres bytes enviados por el **master**, y después 
 de enviarlos por el puerto serie, los transforma en mayúsculas. 
 El resultado lo envía por el puerto **I2C** al MCU **master**.
 > 

@@ -16,7 +16,7 @@
 
 **Sencillo**
 >* Bájate del contenido de la carpeta de GitHub en un fichero Zip.
->* Copia el fichero zip en la carpera que prefieras y desempaquétalo. Esto 
+>* Copia el fichero zip en la carpeta que prefieras y desempaquétalo. Esto 
 creará la carpeta *Nuk_pic32_essentials_lib-master*. Dentro está la que nos 
 interesa: *z_Nuk_pic32_essentials_lib*, que es la librería en sí.
 >* Copia la carpeta *z_Nuk_pic32_essentials_lib* en la carpeta que has creado.

@@ -198,7 +198,7 @@ Abre el explorador de carpetas.
 
 Sitúate en la capeta *Tutorial_01*
 
-Pincha con el `boton_derecho` en un área libre y elige la opción 
+Pincha con el `botón_derecho` en un área libre y elige la opción 
 `abre un terminal`
 
 Ejecuta el comando:
@@ -209,7 +209,7 @@ make/compile.sh -p -p -p
 
 Aparecerá una ventana en la que debemos elegir un *procesador*.
 
-Seguidamente aparacerá una ventana en la que deberemos elegir la carpeta 
+Seguidamente aparecerá una ventana en la que deberemos elegir la carpeta 
 donde se encuentran las librerías (Atención! no la carpeta de la libreria, 
 sino la carpeta que la contiene).
 
@@ -259,7 +259,7 @@ La distrubución viene con los siguientes
 * Config_20.h ____ 0MHz
 * Config_40.h ____ 40MHz
 
-Aunque puden confecionarse otros. Véase [Config_xx.h](Config_xx.h.md)
+Aunque pueden confeccionarse otros. Véase [Config_xx.h](Config_xx.h.md)
 
 
 
@@ -367,7 +367,7 @@ El comando:
 make/compile.sh -p -p -p
 ```
 Realiza las tareas:
-* Compilar las librerias para el procesador elegido.
+* Compilar las librerías para el procesador elegido.
 * Buscar los ficheros para las directivas #include.
 * Compilar nuestro código.
 * Lincarlo todo.

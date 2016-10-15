@@ -21,8 +21,8 @@
 ![metode](img/Nuk-metode.jpg)
 [Top](#TOP) | [Index](Index.md)
 
-**Nuk pic32 essentials lib** es una libreria de objetos escrita en C++ que 
-facilita enórmemente las tareas de desarrollo de proyectos para la gama de 
+**Nuk pic32 essentials lib** es una librería de objetos escrita en C++ que 
+facilita enormemente las tareas de desarrollo de proyectos para la gama de 
 microcontroladores PIC de 32 bits, ya que enmascara (pero no impide) las 
 configuraciones y operaciones mediante registros.
 
@@ -47,7 +47,7 @@ De forma muy intuitiva, se pueden gestionar:
 **Nuk pic32 essentials lib** es **versátil**. 
 Para programadores avanzados, la librería incluye dos clases derivables muy 
 útiles con las que se puede ampliar o modificar su funcionalidad, o desarrollar 
-otras clases que cubran cuaquier propósito.
+otras clases que cubran cualquier propósito.
 * Clases derivables
 	* [Callable](Callable.md)
 	* [IrqObject](IrqObject.md)
@@ -58,7 +58,7 @@ de los MCU 32MX descritas más abajo.
 Corresponden a los que son accesibles al público en general por su 
 construcción física y sirven de base y ejemplo para editar la de todos los demás. 
 Estas disposiciones se pueden cambiar (dentro de las limitaciones que impone el 
-diseño físico de los microcontroladores) modifiando las constantes que 
+diseño físico de los microcontroladores) modificando las constantes que 
 contienen los archivos de configuración:
 
 * Machines
